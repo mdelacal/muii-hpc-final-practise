@@ -11,6 +11,11 @@ Para compilar el programa discretizo.c, hemos creado un Makefile que podemos eje
 $ make hpc
 ```
 
+Por otro lado, si queremos compilarlo con los flags de OpenMP, lanzaremos:
+```
+$ make openmp
+```
+
 Esto nos generará el programa compilado llamado discretizo, el cual ejecutaremos con el comando:
 ```
 $ ./discretizo
