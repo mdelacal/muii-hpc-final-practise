@@ -34,7 +34,7 @@ int main(){
     
     /* Determinar nº de threads y con cuantos elementos trabajará cada proceso */
     omp_set_num_threads(total_threads);
-	//omp_set_num_threads(omp_get_num_threads()); /* si queremos utilizar todos los threads disponibles */
+	/*omp_set_num_threads(omp_get_num_threads());*/ /* si queremos utilizar todos los threads disponibles */
     n_per_thread = n/total_threads;
 
     srand ( time(NULL) ); /* para generar elementos aleatorios diferentes */
@@ -47,9 +47,10 @@ int main(){
         }
 
     /* Imprimir valores del vector creado */
-    // for(i = 0; i < n; i++){
-    //     printf("%d\n", v[i]);
-    // }
+    /* for(i = 0; i < n; i++){
+         printf("%d\n", v[i]);
+    }
+    */
 
     /* Clasificación discretización por grupos de edades */
     #pragma omp for private(i) schedule(static, n_per_thread)
