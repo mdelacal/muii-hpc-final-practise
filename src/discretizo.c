@@ -41,15 +41,21 @@ int main()
     double t_ini, t_fin;
     double secs;
 
-    /* Probaremos con un conjunto de hilos */
+    for (k = 0; k < vector_size; k++)
+    {    
+        n = vector[k];
+        v = (unsigned char *)malloc(sizeof(unsigned char) * n);
+
+        #pragma omp parallel for
+        for (i = 0; i < n; i++)
+        {                    
+            v[i] = rand() % 96;
+        }
+        /* Probaremos con un conjunto de hilos */
         for (actual_threads = 1; actual_threads <= total_threads; actual_threads++)
-        {   
-            
-            for (k = 0; k < vector_size; k++)
-            {      
-            n = vector[k];
+        {          
             /* Reservar espacio en memoria para los vectores v y solution */
-            v = (unsigned char *)malloc(sizeof(unsigned char) * n);
+            
             solution = (unsigned char *)malloc(sizeof(unsigned char) * n);
             /* Determinar nº de threads y con cuantos elementos trabajará cada proceso */
             omp_set_num_threads(actual_threads);
@@ -63,12 +69,9 @@ int main()
                 t_ini = omp_get_wtime(); /* Inicio del contador de tiempo */
                 /* Inicializamos el vector de N elementos de forma aleatoria,
                 con edades entre 0 y 95 años */
-                #pragma omp for schedule(static, n_per_thread)
-                for (i = 0; i < n; i++)
-                {                    
-                    v[i] = rand() % 96;
-                }
-                #pragma omp barrier
+                /*#pragma omp for schedule(static, n_per_thread)*/
+                
+                /*#pragma omp barrier*/
                 /* Clasificación discretización por grupos de edades */
                 #pragma omp for private(i) schedule(static, n_per_thread)
                 for (i = 0; i < n; i++)
@@ -110,11 +113,11 @@ int main()
             secs = (float)((t_fin - t_ini)* 1000.0); /* CLOCKS_PER_SEC */
             printf("El tiempo estimado en realizar el trabajo es de: %.16g ms\n", secs);
 
-            /* Para finalizar, liberamos la memoria del vector v y solution */ 
-            free(v);           
+            /* Para finalizar, liberamos la memoria del vector v y solution */                        
             free(solution);
-
-        }  
+        }
+        printf("------------------------\n");
+        free(v);  
     }
     return 0;
 }
