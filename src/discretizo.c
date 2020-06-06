@@ -15,23 +15,27 @@
 #include <omp.h>
 
 /* CONSTANTES */
-#define NUM_THREADS 4       /* número de threads a utilizar en la discretización */
-#define VECTOR_SIZE 8       /* tamaño N del vector de edades */
-#define GRUPO_1 1           /* grupo de edad [0, 14] años */
-#define GRUPO_2 2           /* grupo de edad [15, 24] años */
-#define GRUPO_3 3           /* grupo de edad [25, 64] años */
-#define GRUPO_4 4           /* grupo de edad [65, 95] años */
+#define NUM_THREADS 4         /* número de threads a utilizar en la discretización */
+#define VECTOR_SIZE 100000000 /* tamaño N del vector de edades */
+#define GRUPO_1 1             /* grupo de edad [0, 14] años */
+#define GRUPO_2 2             /* grupo de edad [15, 24] años */
+#define GRUPO_3 3             /* grupo de edad [25, 64] años */
+#define GRUPO_4 4             /* grupo de edad [65, 95] años */
 
-int main(){
+int main(){  
     /* VARIABLES */
     int i;
-    int n = VECTOR_SIZE;                /* número de elementos del vector */
-    int total_threads = NUM_THREADS;    /* número de threads a utilizar */
-    int n_per_thread;                   /* número de elementos por cada thread */
-    int v[n];                           /* vector de edades */
-    int solution[n];     /* vector con la solución, grupo al que pertenece cada edad */
+    long n = VECTOR_SIZE;                   /* número de elementos del vector */
+    int total_threads = NUM_THREADS;        /* número de threads a utilizar */
+    int n_per_thread;                       /* número de elementos por cada thread */                   
+    unsigned char * v;                      /* vector de edades */
+    unsigned char * solution;               /* vector con la solución, grupo al que pertenece cada edad */
     int group1, group2, group3, group4 = 0; /* elementos por grupo */
     
+    /* Reservar espacio en memoria para los vectores v y solution */
+    v = (unsigned char *) malloc(sizeof(unsigned char)*n);
+    solution = (unsigned char *) malloc(sizeof(unsigned char)*n);
+
     /* Determinar nº de threads y con cuantos elementos trabajará cada proceso */
     omp_set_num_threads(total_threads);
 	/*omp_set_num_threads(omp_get_num_threads());*/ /* si queremos utilizar todos los threads disponibles */
@@ -45,12 +49,6 @@ int main(){
         for(i = 0; i < n; i++){
             v[i] = rand() % 96;
         }
-
-    /* Imprimir valores del vector creado */
-    /* for(i = 0; i < n; i++){
-         printf("%d\n", v[i]);
-    }
-    */
 
     /* Clasificación discretización por grupos de edades */
     #pragma omp for private(i) schedule(static, n_per_thread)
@@ -71,12 +69,13 @@ int main(){
         }
 
     /* RESULTADOS */
-    for(i = 0; i < n; i++)
-        printf("%i\n", solution[i]);
-        
     printf("Grupo 1: %i elementos\n", group1);
     printf("Grupo 2: %i elementos\n", group2);
     printf("Grupo 3: %i elementos\n", group3);
     printf("Grupo 4: %i elementos\n", group4);
+
+    /* Para finalizar, liberamos la memoria del vector v y solution */
+    free(v);
+    free(solution);
 
 }
