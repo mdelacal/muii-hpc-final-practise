@@ -10,7 +10,7 @@ CFLAGS := -fopenmp -c -Wall -ansi
 LDFLAGS := -fopenmp
 CC := gcc
 
-all: dirs discretizo
+all: dirs discretizo discretizo_hybrid
 
 dirs:
 	mkdir -p $(DIROBJ) $(DIREXE)
@@ -18,6 +18,8 @@ dirs:
 discretizo: $(DIROBJ)discretizo.o
 	$(CC) -o $(DIREXE)$@ $^ $(LDFLAGS)
 
+discretizo_hybrid: $(DIROBJ)discretizo_hybrid.o
+	$(CC) -o $(DIREXE)$@ $^ $(LDFLAGS)
 
 $(DIROBJ)%.o: $(DIRSRC)%.c
 	$(CC) $(CFLAGS) $^ -o $@
