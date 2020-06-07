@@ -1,0 +1,165 @@
+Integridad correcta
+Iteracción para: 1 hilos y un tamaño de vector de: 1000 
+Grupo 1: 177 elementos
+Grupo 2: 118 elementos
+Grupo 3: 408 elementos
+Grupo 4: 297 elementos
+El tiempo estimado en realizar el trabajo es de: 0.04030000045895576 ms
+
+Integridad correcta
+Iteracción para: 2 hilos y un tamaño de vector de: 1000 
+Grupo 1: 177 elementos
+Grupo 2: 118 elementos
+Grupo 3: 408 elementos
+Grupo 4: 297 elementos
+El tiempo estimado en realizar el trabajo es de: 0.008299999870359898 ms
+
+Integridad correcta
+Iteracción para: 3 hilos y un tamaño de vector de: 1000 
+Grupo 1: 177 elementos
+Grupo 2: 118 elementos
+Grupo 3: 408 elementos
+Grupo 4: 297 elementos
+El tiempo estimado en realizar el trabajo es de: 0.007000000681728125 ms
+
+Integridad correcta
+Iteracción para: 4 hilos y un tamaño de vector de: 1000 
+Grupo 1: 177 elementos
+Grupo 2: 118 elementos
+Grupo 3: 408 elementos
+Grupo 4: 297 elementos
+El tiempo estimado en realizar el trabajo es de: 3.09089994430542 ms
+
+------------------------
+Integridad correcta
+Iteracción para: 1 hilos y un tamaño de vector de: 10000 
+Grupo 1: 1616 elementos
+Grupo 2: 1045 elementos
+Grupo 3: 4091 elementos
+Grupo 4: 3248 elementos
+El tiempo estimado en realizar el trabajo es de: 0.09930000454187393 ms
+
+Integridad correcta
+Iteracción para: 2 hilos y un tamaño de vector de: 10000 
+Grupo 1: 1616 elementos
+Grupo 2: 1045 elementos
+Grupo 3: 4091 elementos
+Grupo 4: 3248 elementos
+El tiempo estimado en realizar el trabajo es de: 0.05689999833703041 ms
+
+Integridad correcta
+Iteracción para: 3 hilos y un tamaño de vector de: 10000 
+Grupo 1: 1616 elementos
+Grupo 2: 1045 elementos
+Grupo 3: 4091 elementos
+Grupo 4: 3248 elementos
+El tiempo estimado en realizar el trabajo es de: 0.03790000081062317 ms
+
+Integridad correcta
+Iteracción para: 4 hilos y un tamaño de vector de: 10000 
+Grupo 1: 1616 elementos
+Grupo 2: 1045 elementos
+Grupo 3: 4091 elementos
+Grupo 4: 3248 elementos
+El tiempo estimado en realizar el trabajo es de: 4.006199836730957 ms
+
+------------------------
+Integridad correcta
+Iteracción para: 1 hilos y un tamaño de vector de: 100000 
+Grupo 1: 15748 elementos
+Grupo 2: 10388 elementos
+Grupo 3: 41565 elementos
+Grupo 4: 32299 elementos
+El tiempo estimado en realizar el trabajo es de: 1.143800020217896 ms
+
+Integridad correcta
+Iteracción para: 2 hilos y un tamaño de vector de: 100000 
+Grupo 1: 15748 elementos
+Grupo 2: 10388 elementos
+Grupo 3: 41565 elementos
+Grupo 4: 32299 elementos
+El tiempo estimado en realizar el trabajo es de: 0.507099986076355 ms
+
+Integridad correcta
+Iteracción para: 3 hilos y un tamaño de vector de: 100000 
+Grupo 1: 15748 elementos
+Grupo 2: 10388 elementos
+Grupo 3: 41565 elementos
+Grupo 4: 32299 elementos
+El tiempo estimado en realizar el trabajo es de: 0.3334000110626221 ms
+
+Integridad correcta
+Iteracción para: 4 hilos y un tamaño de vector de: 100000 
+Grupo 1: 15748 elementos
+Grupo 2: 10388 elementos
+Grupo 3: 41565 elementos
+Grupo 4: 32299 elementos
+El tiempo estimado en realizar el trabajo es de: 3.589699983596802 ms
+
+------------------------
+Integridad correcta
+Iteracción para: 1 hilos y un tamaño de vector de: 1000000 
+Grupo 1: 156071 elementos
+Grupo 2: 104336 elementos
+Grupo 3: 416264 elementos
+Grupo 4: 323329 elementos
+El tiempo estimado en realizar el trabajo es de: 11.57240009307861 ms
+
+Integridad correcta
+Iteracción para: 2 hilos y un tamaño de vector de: 1000000 
+Grupo 1: 156071 elementos
+Grupo 2: 104336 elementos
+Grupo 3: 416264 elementos
+Grupo 4: 323329 elementos
+El tiempo estimado en realizar el trabajo es de: 6.112299919128418 ms
+
+Integridad correcta
+Iteracción para: 3 hilos y un tamaño de vector de: 1000000 
+Grupo 1: 156071 elementos
+Grupo 2: 104336 elementos
+Grupo 3: 416264 elementos
+Grupo 4: 323329 elementos
+El tiempo estimado en realizar el trabajo es de: 9.174500465393066 ms
+
+Integridad correcta
+Iteracción para: 4 hilos y un tamaño de vector de: 1000000 
+Grupo 1: 156071 elementos
+Grupo 2: 104336 elementos
+Grupo 3: 416264 elementos
+Grupo 4: 323329 elementos
+El tiempo estimado en realizar el trabajo es de: 8.71049976348877 ms
+
+------------------------
+Integridad correcta
+Iteracción para: 1 hilos y un tamaño de vector de: 10000000 
+Grupo 1: 1562342 elementos
+Grupo 2: 1042092 elementos
+Grupo 3: 4166068 elementos
+Grupo 4: 3229498 elementos
+El tiempo estimado en realizar el trabajo es de: 112.2085037231445 ms
+
+Integridad correcta
+Iteracción para: 2 hilos y un tamaño de vector de: 10000000 
+Grupo 1: 1562342 elementos
+Grupo 2: 1042092 elementos
+Grupo 3: 4166068 elementos
+Grupo 4: 3229498 elementos
+El tiempo estimado en realizar el trabajo es de: 56.35749816894531 ms
+
+Integridad correcta
+Iteracción para: 3 hilos y un tamaño de vector de: 10000000 
+Grupo 1: 1562342 elementos
+Grupo 2: 1042092 elementos
+Grupo 3: 4166068 elementos
+Grupo 4: 3229498 elementos
+El tiempo estimado en realizar el trabajo es de: 33.72909927368164 ms
+
+Integridad correcta
+Iteracción para: 4 hilos y un tamaño de vector de: 10000000 
+Grupo 1: 1562342 elementos
+Grupo 2: 1042092 elementos
+Grupo 3: 4166068 elementos
+Grupo 4: 3229498 elementos
+El tiempo estimado en realizar el trabajo es de: 25.82299995422363 ms
+
+------------------------
